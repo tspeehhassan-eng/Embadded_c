@@ -1,0 +1,14 @@
+
+1- C function to SWAP two arrays.don't use system string lib
+2- C function to multiply two integer numbers. by bitwise 
+3-C function to toggle a specific bit in 8-bits variable
+4- C function to copy an array of char (contains repeated numbers) to a new array excluding the
+repeated numbers using only one loop O
+5- C function to get the most repeated element in an array.
+6- C function to count how many times it has been called in the system.
+7-C function to remove the duplicated numbers in an array.
+8- C function to get the max. / min. number in array and its index
+9- C function to count number of zeros / ones in the binary of an integer.
+10-C function to reverse bits of an 8-bit number. Example: 11010010 --> 01001011
+Extra: C function to send a frame of 8 bytes and then send the sum of the data in the frame in 2 bytes,
+then write a function that will receive the frame and check if the data is received correctly.
