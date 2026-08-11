@@ -1,7 +1,7 @@
 //2- C function to multiply two integer numbers. by bitwise 
 
-#ifndef BitMath.h
-#define BitMath.h
+#ifndef BIT_MATH_H
+#define BIT_MATH_H
 
 #define set(reg,no) reg |= (1 << no)
 #define clear(reg,no) reg &= ~(1 << no)
