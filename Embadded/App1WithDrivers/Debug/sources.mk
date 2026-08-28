@@ -20,6 +20,11 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+Hal/BUTTON \
+Hal/BUZZER \
+Hal/Btn \
+Hal/LED \
+Hal/SevenSegment \
 Mcal/DIO \
 . \
 

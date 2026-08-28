@@ -45,26 +45,7 @@ void DIO_ToggleAtPin(uint8_t GroupName,uint8_t PinNo );
 void DIO_ToggleAtAll(uint8_t GroupName);
 
 void DIO_EnableInternalPullUp(uint8_t GroupName,uint8_t PinNo );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+void DIO_DisableInternalPullUp(uint8_t GroupName, uint8_t PinNo);
 
 
 

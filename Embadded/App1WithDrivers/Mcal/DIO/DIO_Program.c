@@ -161,20 +161,42 @@ void DIO_ToggleAtAll(uint8_t GroupName)
 									}
 
 }
+/*
+DDR = 0
+PORT = 1  → Pull-up Enabled
+PORT = 0  → Pull-up Disabled
+*/
+void DIO_EnableInternalPullUp(uint8_t GroupName, uint8_t PinNo)
+{
+    if (PinNo <= DIO_pin7)
+    {
+        DIO_SelectDirectionForPin(
+            GroupName,
+            PinNo,
+            DIO_Input
+        );
 
-void DIO_EnableInternalPullUp(uint8_t GroupName,uint8_t PinNo ){
-	if(PinNo<=DIO_pin7){
-		switch(GroupName)
-											{
-												case DIO_GroupA: set(PORTA_Reg,PinNo); clear(DDRA_Reg,PinNo); break;
-												case DIO_GroupB: set(PORTB_Reg,PinNo); clear(DDRB_Reg,PinNo);break;
-												case DIO_GroupC: set(PORTC_Reg,PinNo); clear(DDRC_Reg,PinNo); break;
-												case DIO_GroupD: set(PORTD_Reg,PinNo); clear(DDRD_Reg,PinNo); break;
-												default: return;/*error code*/
-											}	}
+        DIO_WriteValueForPin(
+            GroupName,
+            PinNo,
+            DIO_High
+        );
+    }
 }
+void DIO_DisableInternalPullUp(uint8_t GroupName, uint8_t PinNo)
+{
+    if (PinNo <= DIO_pin7)
+    {
+        DIO_SelectDirectionForPin(
+            GroupName,
+            PinNo,
+            DIO_Input
+        );
 
-
-
-
-
+        DIO_WriteValueForPin(
+            GroupName,
+            PinNo,
+            DIO_Low
+        );
+    }
+}
